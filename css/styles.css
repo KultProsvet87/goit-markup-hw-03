@@ -390,6 +390,7 @@ address {
 }
 
 .project-name {
+    margin: 20px 24px 4px 24px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -397,6 +398,7 @@ address {
 }
 
 .project-text {
+    margin: 0 24px 20px 24px;
     color: var(--main-text-color);
     font-size: 16px;
     line-height: 1.9;
