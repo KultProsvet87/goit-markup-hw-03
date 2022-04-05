@@ -61,13 +61,30 @@ h2 {
     padding: 0px 15px;
     margin: auto;
     width: 1200px;
-    display: flex;
 }
+
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    border: 0; 
+    padding: 0; 
+    white-space: nowrap; 
+    clip-path: inset(100%); 
+    clip: rect(0 0 0 0); 
+    overflow: hidden; 
+} 
 
 /* header, footer */
 
 header {
     border-bottom: solid 1px #ECECEC;
+}
+
+.header-box {
+    display: flex;
+    margin-bottom: -1px;
 }
 
 .logo {
@@ -83,10 +100,6 @@ header {
 
 .logo > span {
     color: var(--accent-color);
-}
-
-.logo.bottom {
-    color: #ffffff;
 }
 
 .nav-box {
@@ -168,6 +181,16 @@ footer {
     background-color: #2F303A;
 }
 
+footer > .container {
+    padding: 60px 0;
+}
+
+.logo.bottom {
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
 address {
     font-style: normal;
 }
@@ -178,7 +201,13 @@ address {
     background-color: #2F303A;
 }
 
+.container.hero {
+    padding: 200px 0;
+    text-align: center;
+}
+
 .hero-title {
+    margin: 0 auto 30px auto;
     color: var(--hero-text-color);
     font-weight: 900;
     font-size: 44px;
@@ -189,6 +218,9 @@ address {
 }
 
 .hero-button {
+    padding: 10px 32px;
+    border-radius: 4px;
+    border: none;
     color: var(--hero-text-color);
     font-family: 'Roboto';
     font-weight: 700;
@@ -196,6 +228,7 @@ address {
     line-height: 1.9;
     letter-spacing: 0.06em;
     background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -205,13 +238,76 @@ address {
 
 /* Наши преимущества */
 
+.container.benefits {
+    padding: 90px 0px;
+}
+
+.benefits-list {
+    margin: 0;
+    padding: 0;
+}
+
 .benefits-title {
+    margin: 0;
     color: var(--second-text-color);
     font-weight: 700;
     line-height: 1.14;
 }
 
+.benefits-list > li {
+    display: inline-block;
+    width: calc((100% - 120px)/4);
+}
+
+.benefits-list > li + li {
+    margin-left: 30px;
+}
+
+.benefits-list p {
+    margin: 10px 0 0 0;
+}
+
+/* Чем мы занимаемся */
+
+.container.work {
+    padding: 0 0 94px 0;
+}
+
+.work-title {
+    margin: 0 0 50px 0;
+}
+
+.work-list > li {
+    display: inline-block;
+}
+
+.work-list > li + li {
+    margin-left: 30px;
+}
+
 /* команда */
+
+.team {
+    background-color: var(--second-bg-color);
+}
+
+.container.team {
+    padding: 90px 0;
+}
+
+.team-title {
+    margin: 0 0 50px 0;
+}
+
+.team-list > li {
+    display: inline-block;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list > li + li {
+    margin-left: 30px;
+}
 
 .teammember {
     color: var(--second-text-color);
@@ -229,9 +325,7 @@ address {
     text-align: center;
 }
 
-.team {
-    background-color: var(--second-bg-color);
-}
+
 
 /* portfolio */
 
